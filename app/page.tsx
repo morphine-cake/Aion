@@ -17,6 +17,7 @@ export default function Home() {
   const [milliseconds, setMilliseconds] = useState(0);
   const [completedPomodoros, setCompletedPomodoros] = useState(0);
   const [resetActive, setResetActive] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Calculate minutes and seconds from timeRemaining
   const minutes = Math.floor(timeRemaining / 60);
@@ -57,6 +58,11 @@ export default function Home() {
       if (msInterval) clearInterval(msInterval);
     };
   }, [timerState]);
+
+  // Handle mount animation
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Handle play button
   const handlePlay = useCallback(() => {
@@ -100,7 +106,11 @@ export default function Home() {
   const isStopActive = timerState === "paused";
 
   return (
-    <main className="app-main h-screen bg-gradient-to-b from-[#F9F9F9] to-[#EDEDED] overflow-hidden">
+    <main
+      className={`app-main h-screen bg-gradient-to-b from-[#F9F9F9] to-[#EDEDED] overflow-hidden ${
+        isMounted ? "animate-dissolve-in" : "opacity-0"
+      }`}
+    >
       <div className="app-wrapper w-full h-full flex flex-col justify-start items-center relative mx-auto scale-75 sm:scale-100">
         {/* Main Container - Clock and Controls */}
         <div className="app-main-container relative grow flex flex-col items-center justify-center gap-[40px] w-auto h-auto pt-0 sm:pt-[70px]">
