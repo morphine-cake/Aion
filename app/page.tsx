@@ -101,18 +101,18 @@ export default function Home() {
 
   return (
     <main className="app-main h-screen bg-gradient-to-b from-[#F9F9F9] to-[#EDEDED] overflow-hidden">
-      <div className="app-wrapper w-full h-full max-h-[970px] flex flex-col justify-start items-center relative mx-auto scale-75 sm:scale-100">
+      <div className="app-wrapper w-full h-full flex flex-col justify-start items-center relative mx-auto scale-75 sm:scale-100">
         {/* Main Container - Clock and Controls */}
-        <div className="app-main-container relative flex-[0_0_auto] flex flex-col items-center justify-center gap-[40px] w-auto h-auto pt-0 sm:pt-[70px]">
+        <div className="app-main-container relative grow flex flex-col items-center justify-center gap-[40px] w-auto h-auto pt-0 sm:pt-[70px]">
           {/* Title and Clock Wrapper */}
           <div className="app-content-wrapper flex flex-col gap-[16px]">
             {/* Title Container */}
             <div className="app-title-container w-full flex items-end justify-between px-[4px]">
               {/* Left side - Logo and Subtext */}
               <div className="app-title-left flex flex-col gap-[4px] items-start">
-                <div className="app-logo-container relative w-[78px] h-[19px]">
+                <div className="app-logo-container relative w-[113px] h-[27px]">
                   <Image
-                    src="/assets/a1c8aee13c4d4f34470883be6abcc8add8d6c3fe.svg"
+                    src="/assets/logo.svg"
                     alt="AION Logo"
                     fill
                     className="app-logo-image object-contain"
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
 
         {/* Bottom Container - Fan Decoration */}
-        <div className="app-bottom-container relative flex-[1_1_auto] h-auto flex items-end justify-center w-full">
+        <div className="app-bottom-container relative grow-0 h-auto flex items-end justify-center w-full">
           <div className="app-fan-wrapper w-[368px] h-[352px] translate-y-[19%]">
             <DecorationFan />
           </div>
