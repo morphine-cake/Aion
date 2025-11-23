@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --text-main: #191f22;
+  --text-screen: #ffffff;
+  --bg-screen-highlight: rgba(255, 255, 255, 0.9);
+  --bg-screen: #191f22;
+  --text-screen-muted: rgba(255, 255, 255, 0.8);
+  --bg-screen-deep: #0c161b;
+  --bg-cutout: #191f22;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

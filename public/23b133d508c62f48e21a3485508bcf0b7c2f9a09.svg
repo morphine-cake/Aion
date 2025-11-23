@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="play-icon">
+<path id="polay" d="M14.0366 5.53661C16.5538 7.10173 16.5538 10.7654 14.0366 12.3305L6.11208 17.2576C3.44757 18.9143 2.10657e-07 16.9983 3.47803e-07 13.8607L7.7855e-07 4.00637C9.15697e-07 0.868812 3.44757 -1.04725 6.11208 0.609441L14.0366 5.53661Z" fill="var(--fill-0, #E8E8E8)" style="fill:#E8E8E8;fill:color(display-p3 0.9098 0.9098 0.9098);fill-opacity:1;"/>
+<path id="shadow" d="M2.84375e-05 4.00682C2.85747e-05 0.869262 3.44782 -1.04734 6.11233 0.609357L14.0362 5.53611C15.4557 6.41871 16.0741 7.96896 15.8926 9.43358C15.7523 8.30091 15.1339 7.21867 14.0362 6.53611L6.11233 1.60936C3.44782 -0.0473359 2.85747e-05 1.86926 2.84375e-05 5.00682V4.00682Z" fill="var(--fill-0, #D1D1D1)" style="fill:#D1D1D1;fill:color(display-p3 0.8196 0.8196 0.8196);fill-opacity:1;"/>
+</g>
+</svg>
