@@ -118,7 +118,7 @@ export default function Home() {
     >
       <div className="app-wrapper w-full h-full flex flex-col justify-start items-center relative mx-auto">
         {/* Main Container - Clock and Controls */}
-        <div className="app-main-container relative grow flex flex-col items-center justify-center gap-[40px] w-auto h-auto pt-0 sm:pt-[70px] scale-75 sm:scale-100 md:scale-110 lg:scale-125 xl:scale-150 2xl:scale-[1.75] transition-transform duration-300 ease-in-out">
+        <div className="app-main-container relative grow flex flex-col items-center justify-center gap-[40px] w-auto h-auto pt-0 sm:pt-[70px] scale-75 sm:scale-100 md:scale-110 lg:scale-125 xl:scale-150 2xl:scale-[1.75] transition-transform duration-300 ease-in-out z-10">
           {/* Title and Clock Wrapper */}
           <div className="app-content-wrapper flex flex-col gap-[16px]">
             {/* Title Container */}
