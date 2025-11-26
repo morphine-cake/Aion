@@ -4,6 +4,7 @@ import ControlButton from "@/components/ControlButton";
 import DecorationFan from "@/components/DecorationFan";
 import FlipClock from "@/components/FlipClock";
 import LeverSelector from "@/components/LeverSelector";
+import { useSound } from "@/hooks/useSound";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 
@@ -18,6 +19,9 @@ export default function Home() {
   const [completedPomodoros, setCompletedPomodoros] = useState(0);
   const [resetActive, setResetActive] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+
+  // Sound effects
+  const playTimerEndSound = useSound("/Sounds/timer-end-sound-effect.mp3");
 
   // Calculate minutes and seconds from timeRemaining
   const minutes = Math.floor(timeRemaining / 60);
@@ -36,6 +40,7 @@ export default function Home() {
             // Timer completed
             setTimerState("stopped");
             setCompletedPomodoros((prev) => prev + 1);
+            playTimerEndSound();
             return 0;
           }
           return prev - 1;
@@ -57,7 +62,7 @@ export default function Home() {
       if (interval) clearInterval(interval);
       if (msInterval) clearInterval(msInterval);
     };
-  }, [timerState]);
+  }, [timerState, playTimerEndSound]);
 
   // Handle mount animation
   useEffect(() => {

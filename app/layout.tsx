@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aionclock.com"),
   title: "AION — Minimal Pomodoro Timer",
   description:
     "AION helps you focus with a minimalist design, rhythmic sessions, and a distraction-free environment.",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     title: "AION — Minimal Pomodoro Timer",
     description:
       "AION helps you focus with a minimalist design, rhythmic sessions, and a distraction-free environment.",
-    url: "https://aion.burakbasci.com",
+    url: "https://aionclock.com",
     siteName: "AION",
     images: [
       {
@@ -82,8 +84,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-D9KF00GTNB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D9KF00GTNB');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
-
