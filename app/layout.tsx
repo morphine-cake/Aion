@@ -7,6 +7,12 @@ export const metadata: Metadata = {
   title: "AION — Minimal Pomodoro Timer",
   description:
     "AION helps you focus with a minimalist design, rhythmic sessions, and a distraction-free environment.",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
   keywords: [
     "aion pomodoro",
     "pomodoro timer",
